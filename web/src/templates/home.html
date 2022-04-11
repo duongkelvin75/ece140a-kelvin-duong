@@ -1,165 +1,101 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Page Info -->
-    <title>Agile Demo</title>
-    <meta name="author" content="Ramsin Khoshabeh">
-    <meta name="description" content="A Place to Call Home">
+  <!-- Page Info -->
+  <title>Kelvin Duong ECE 140B</title>
+  <meta name="author" content="Kelvin Duong">
+  <meta name="description" content="140B Landing Page">
 
-    <link rel="stylesheet" type="text/css" href="css/agile.css">
-  </head>
+  <link rel="stylesheet" type="text/css" href="css/agile.css">
+</head>
 
-  <body>
+<body>
 
-    <div class='hero'>
-      <h1> Agile CSS Micro-Framework </h1>
-      <p> Experimental design for ECE140b </p>
+  <div class='hero'>
+    <h1> PlantPal </h1>
+    <p> Landing page for my ECE 140B project </p>
+  </div>
+
+  <section class='padding-responsive'>
+
+    <div class='separator'>Team Members</div>
+
+    <table class='margin-top-xl'>
+      <thead>
+        <tr>
+          <th class='small'> Name </th>
+          <th class='large'> Email </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> Adin Ackerman </td>
+          <td> aiackerman@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Michael Brown </td>
+          <td> m9brown@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Kelvin Duong </td>
+          <td> k6duong@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Jerome Lam </td>
+          <td> j2lam@ucsd.edu </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class='separator'>Project Updates</div>
+    <div class='update'>
+      <h3>Week 2</h3>
+      <h4>Product Proposal</h4>
+      <p>We would like to introduct our product PlantPal. PlantPal is a set of devices read moisture, sunlight, and temperature data to monitor the health of your plants. The devices are all connected to a centralized database which is viewable via our phone app. The product is designed to help individuals learn or improve their plant caretaking skills.</p>
+      <h4>Early Market Research</h4>
+      <p>We presented our initial proposal to friends and family who engjoy gardening and asked wether or not they would be interested in buying a finished product. From our poll 11/12 would be interested in our product showing that it potential for our customer base. We also asked wether they saw the product as a vitamin or painkiller and the customers were fairly split with 58.3% claiming the product was vitamin while the other 41.7 claiming the product to be a pain killer. </p>
+      <h4>Plans</h4>
+      <p>We are at the start of the development process so there isn't much to update regarding the project. We created a github project board for project management and set goals for our project including getting the bluetooth on our MCU to work so we can connect it our phones. </p>
     </div>
-
-    <section class='padding-responsive'>
-
-      <div class='separator'>Database Records</div>
-
-      <table class='margin-top-xl'>
-        <thead>
-          <tr>
-            <th class='small'> First Name </th>
-            <th class='medium'> Last Name </th>
-            <th class='large'> Email </th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for user in users %}
-          <tr>
-            <td> {{user[0]}} </td>
-            <td> {{user[1]}} </td>
-            <td> {{user[2]}} </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-
-      <div class='separator'>Typography</div>
-
-      <h1 class='bordered'> H1 Element </h1>
-      <h2 class=''> H2 Element </h2>
-      <h3 class=''> H3 Element </h3>
-      <h4 class=''> H4 Element </h4>
-      <h5 class=''> H5 Element </h5>
-      <h6 class=''> H6 Element </h6>
-
-      <hr>
-
-      <p> I am a paragraph </p>
-
-      <ul>
-        <li> This is a list </li>
-        <li> And so is this </li>
-      </ul>
-
-      <ol>
-        <li> This is an ordered list-item </li>
-        <li> Don't forget about me!</li>
-      </ol>
-
-      <div class='separator'>
-        Responsive (2-column) Grid
+    <div class ='upcoming'>
+      <p>Come back next week for more updates</p>
+    </div>
+    <div class='separator'>
+        Survey
       </div>
-
-      <section class='responsive_grid'>
-        <div class='card bordered margin-none'> I'm a card! </div>
-        <div class='card bordered margin-none'> And so am I! </div>
-      </section>
-
-      <div class='separator'>Tables</div>
-
-      <table class='margin-top-xl'>
-        <thead>
-          <tr>
-            <th class='small'> column </th>
-            <th class='medium'> column </th>
-            <th class='large'> column </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td> column </td>
-            <td> column </td>
-            <td> column </td>
-          </tr>
-          <tr>
-            <td> column </td>
-            <td> column </td>
-            <td> column </td>
-          </tr>
-          <tr>
-            <td> column </td>
-            <td> column </td>
-            <td> column </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class='separator'>Forms</div>
-
-      <div class='btn small '> Small Button </div>
-      <div class='btn small outline'> Small Button </div>
-      <div class='btn small pill'> Small Button </div>
-      <div class='btn small' disabled> Small Button </div> <BR><BR>
-
-      <div class='btn medium'> Medium Button </div>
-      <div class='btn medium outline'> Medium Button </div>
-      <div class='btn medium pill'> Medium Button </div>
-      <div class='btn medium' disabled> Medium Button </div> <BR><BR>
-
-      <form>
-
         <section class='responsive_grid'>
 
           <div class='field'>
             <label> Enter your first name: &nbsp;</label>
             <input type='text' name='name' value='' class='margin-top-lg'>
           </div>
-
-          <div class='field select '>
-            <label> Choose a color: &nbsp;</label>
-            <div class="select margin-top-lg">
-              <select>
-                <option>First select</option>
-                <option>Red</option>
-                <option>Green</option>
-                <option>Blue</option>
-              </select>
-              <div class="select__arrow"></div>
-            </div>
-          </div>
         </section>
 
         <section class='responsive_grid'>
           <div class="field">
-            <label> Choose an Item </label>
-            <label class="margin-top-lg control control--checkbox">First checkbox
+            <label> Do you like this page? </label>
+            <label class="margin-top-lg control control--checkbox">Yes
               <input type="checkbox" checked="checked" />
               <div class="control__indicator"></div>
             </label>
-            <label class="control control--checkbox">Second checkbox
+            <label class="control control--checkbox">No
               <input type="checkbox" />
               <div class="control__indicator"></div>
             </label>
           </div>
 
           <div class="field">
-            <label> Choose an Item </label>
-            <label class="margin-top-lg control control--radio">First radio
+            <label> Are you having a good day? </label>
+            <label class="margin-top-lg control control--radio">Yes
               <input type="radio" name="radio" checked="checked" />
               <div class="control__indicator"></div>
             </label>
-            <label class="control control--radio">Second radio
+            <label class="control control--radio">No
               <input type="radio" name="radio" />
               <div class="control__indicator"></div>
             </label>
@@ -169,6 +105,6 @@
       </form>
 
     </section>
+</body>
 
-  </body>
 </html>
