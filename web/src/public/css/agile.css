@@ -1,369 +1,140 @@
-:root {
-  --primary-color: #07f;
-  --accent-color: rgba(102, 153, 102, 1);
-  --accent-color-dark: rgba(226, 77, 54, 1);
-  --dark-color: rgba(19, 58, 27, 1);
-  --dark-color-alt: rgba(19, 58, 27, .5);
-  --medium-color: #bbb;
-  --light-color: rgba(19, 58, 27, .25);
-  --page-color: #FFF0D9;
-  --soft-color: rgba(221, 214, 212, 1);
-  --margin-xxl: 3rem;
-  --margin-xl: 2rem;
-  --margin-lg: 1rem;
-  --margin-med: 0.66rem;
-  --margin-sm: 0.33rem;
-  --base-font-size: 16pt;
-  --border-radius: 6px;
-  --rounded-radius: 4rem;
-  --padding-xxl: 2rem;
-  --padding-xl: 1.4rem;
-  --padding-lg: 1rem;
-  --padding-med: 0.66rem;
-  --padding-sm: 0.33rem;
-  --font: Lato;
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  font-size: calc(1rem + 1vw);
-  background: var(--page-color);
-  margin: 0px;
-  font-family: var(--font);
-}
-p, ol li, ul li {
-  font-size: calc(0.8rem + 1vw);
-}
-/* -- ELEMENTS -- */
-.hero {
-  background: var(--dark-color);
-  color: #FFF0D9;
-  padding: calc(1rem + 8vh) calc(1rem + 3vw) calc(3rem + 10vh) calc(1rem + 3vw);
-}
-.hero h1 {
-  font-size: calc(1rem + 5vw);
-  background: none;
-  margin: 0px;
-  color: #EBCB8C;
-}
-.hero p {
-  margin: 0px 1.5rem;
-  color: #FFF0D9;
-}
-h1 {
-  font-size: calc(1rem + 3.5vw);
-  color: var(--dark-color);
-  padding: var(--padding-lg) var(--padding-xl);
-  margin: var(--margin-lg) auto;
-}
-h2 {
-  font-size: calc(1rem + 2.7vw);
-    color: var(--dark-color);
-}
-h3 {
-  font-size: calc(1rem + 2.1vw);
-    color: var(--dark-color);
-  text-transform:uppercase;
-}
-h4 {
-  font-size: calc(1rem + 1.5vw);
-    color: var(--dark-color-alt);
-}
-h5 {
-  font-size: calc(1rem + 1vw);
-}
-h6 {
-  font-size: calc(1rem + 0.5vw);
-}
-p {
-    color: var(--accent-color);
-}
-.update {
-  padding: var(--padding-lg) var(--padding-xl);
-  margin: var(--margin-lg) auto;
-  border: 1px solid var(--dark-color);
-  border-radius: var(--border-radius);
-}
-.upcoming{
-  padding: var(--padding-lg);
-  margin: var(--margin-med) auto;
-  background: var(--light-color);
-  border-radius: var(--border-radius);
-  width: 100%;
-  text-align: center;
-}
-/* h2, h3, h4, h5, h6, .card {
-  padding: var(--padding-lg);
-  margin: var(--margin-med) auto;
-  background: var(--light-color);
-  width: 100%;
-} */
-table {
-  table-layout: fixed;
-  border-collapse: collapse;
-  width: 100%;
-}
-table th {
-  background: var(--dark-color-alt);
-  color: rgba(19, 58, 27, 1);
-}
-table th, table td {
-  margin: 0px;
-  text-align: left;
-  padding: var(--padding-med);
-  border: 1px solid var(--dark-color);
-  
-}
-table tr:nth-child(odd) {
-  background-color: var(--light-color);
-  color: rgba(19, 58, 27, .75);
-}
-table tr:nth-child(even) {
-  background-color: var(--dark-color-alt);
-  color: rgba(19, 58, 27, .75);
-}
-/* horizontal line with text label */
-.separator {
-  font-size: calc(1rem + 1vw);
-  color: var(--accent-color);
-  display: flex;
-  text-transform: uppercase;
-  align-items: center;
-  text-align: center;
-  margin: calc(2rem + 3vw) auto;
-}
-.separator::before, .separator::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid var(--dark-color);
-}
-.separator::before {
-  margin-right: 1rem;
-}
-.separator::after {
-  margin-left: 1rem;
-}
-/* -- GRID -- */
-.responsive_grid {
-  display: grid;
-  padding: 0px;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-}
-/* -- UTILITY */
-.padding-lg {
-  padding: var(--padding-lg);
-}
-.padding-xl {
-  padding: var(--padding-xl);
-}
-.padding-xxl {
-  padding: var(--padding-xxl);
-}
-.padding-responsive {
-  padding: calc(1rem + 3vw);
-}
-.margin-none {
-  margin: none !important;
-}
-.margin-top-lg {
-  margin-top: var(--margin-lg);
-}
-.margin-top-xl {
-  margin-top: var(--margin-xl);
-}
-.margin-top-xxl {
-  margin-top: var(--margin-xxl);
-}
-.rounded {
-  border-radius: var(--rounded-radius);
-}
-.bordered {
-  border: 1px solid var(--medium-color);
-  border-radius: var(--border-radius);
-}
-.btn {
-  border: 1px solid var(--accent-color);
-  display: inline-flex;
-  font-size: calc(1rem + 0.6vw);
-  cursor: pointer;
-  padding: var(--padding-med) var(--padding-lg);
-  border-radius: var(--border-radius);
-  background: var(--accent-color);
-  color: white;
-  user-select: none;
-  margin: 0px 0.25rem 0.75rem 0px;
-}
-.btn:hover {
-  background: var(--accent-color-dark);
-}
-.btn.small {
-  font-size: calc(0.5rem + 0.5vw);
-  padding: 0.4rem 0.8rem;
-}
-.btn.large {
-  font-size: calc(1.2rem + 1.4vw);
-  padding: var(--padding-lg) var(--padding-xxl);
-}
-.btn.outline {
-  background: rgba(240, 239, 234, 1);
-  border: 1px solid var(--dark-color);
-  color: #333;
-}
-.btn.primary {
-  background: var(--accent-color);
-  color: white;
-}
-.btn.warning {
-  background: var(--warning-color);
-  color: white;
-}
-.btn.pill {
-  border-radius: var(--rounded-radius);
-}
-.btn[disabled] {
-  color: rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--medium-color);
-  background-color: var(--light-color);
-}
-.btn[disabled]:hover {
-  cursor: not-allowed;
-  border-color: transparent;
-}
-.field {
-  border: 1px solid var(--dark-color);
-  padding: var(--padding-lg);
-  margin-bottom: var(--margin-lg);
-}
-label {
-  color: var(--dark-color);
-}
-input[type="text"], textarea {
-  border: none;
-  background-color: var(--light-color);
-  padding: var(--padding-med);
-  width: 100%;
-  font-size: inherit;
-  outline: none;
-  border: 1px solid var(--medium-color);
-  border-radius: 2px;
-  width: 100%;
-}
-input[type="text"]:focus, textarea:focus {
-  border-color: var(--dark--color);
-  background: #fff;
-}
-/* ------------ select ----- */
-.select {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-.select select {
-  display: inline-block;
-  width: 100%;
-  cursor: pointer;
-  padding: var(--padding-med);
-  outline: 0;
-  border-radius: 0;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  font-size: calc(0.8rem + 1vw);
-}
-.select select::-ms-expand {
-  display: none;
-}
-.select select:hover, .select select:focus {
-  background: var(--light-color);
-}
-.select select:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-.select__arrow {
-  position: absolute;
-  top: 45%;
-  right: 1rem;
-  pointer-events: none;
-  border-style: solid;
-  border-width: 10px 7px 0 7px;
-  border-color: var(--dark-color) transparent transparent transparent;
-}
-.select select:hover ~ .select__arrow, .select select:focus ~ .select__arrow {
-  border-top-color: var(--dark-color);
-}
-/* checkboxes and radio buttons... */
-.control {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.control input {
- /* hide the HTML control */
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-.control__indicator {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  height: 22px;
-  width: 22px;
-  background: #e6e6e6;
-  background: var(--soft-color);
-}
-.control--radio .control__indicator {
-  border-radius: 50%;
-}
-.control:hover input ~ .control__indicator, .control input:focus ~ .control__indicator {
-  background: var(--soft-color);
-}
-.control input:checked ~ .control__indicator {
-  background: var(--accent-color);
-}
-.control:hover input:not([disabled]):checked ~ .control__indicator, .control input:checked:focus ~ .control__indicator {
-  background: var(--accent-color);
-}
-.control input:disabled ~ .control__indicator {
-  background: #e6e6e6;
-  opacity: 0.6;
-  pointer-events: none;
-}
-.control__indicator:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.control input:checked ~ .control__indicator:after {
-  display: block;
-}
-.control--checkbox .control__indicator:after {
-  left: 8px;
-  top: 5px;
-  width: 3px;
-  height: 8px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-.control--checkbox input:disabled ~ .control__indicator:after {
-  border-color: var(--dark-color);
-}
-.control--radio .control__indicator:after {
-  left: 7px;
-  top: 7px;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background: #fff;
-}
-.control--radio input:disabled ~ .control__indicator:after {
-  background: #7b7b7b;
-}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Page Info -->
+  <title>Kelvin Duong ECE 140B</title>
+  <meta name="author" content="Kelvin Duong">
+  <meta name="description" content="140B Landing Page">
+
+  <link rel="stylesheet" type="text/css" href="css/agile.css">
+</head>
+
+<body>
+
+  <div class='hero'>
+    <h1> PlantPal </h1>
+    <p> Landing page for my ECE 140B project </p>
+  </div>
+
+  <section class='padding-responsive'>
+    <div class="flex-container">
+      <div><a href="#kvp">Key Value Proposition</a>.</div>
+      <div><a href="#pp">Product Page</a>.</div>
+      <div><a href="#tm">Team Members</a>.</div>
+      <div><a href="#up">Updates</a>.</div>
+    </div>
+    <div class='separator' id='kvp'>Key Value Proposition</div>
+    <div class='update'>
+      <h4>Key Value Proposition</h4>
+      <p>Our plant monitoring system, PlantPal, helps amateur gardeners who wish to learn proper plant maintenance for healthier plants by displaying soil moisture, sunlight, and temperature history on our app and sending reminders and tips for plant maintenance. Unlike passive maintenance systems such as automated sprinklers, our product actively reads plant data to provide more optimate caretaking. Additionally, our product acts as a learning tool for amateur hobbyists who want to learn more about gardening</p>
+    </div>
+    <div class='separator' id='pp'>Product Page</div>
+    <div class='update'>
+      <h4>Product</h4>
+      <p>PlantPal is a network of devices to monitor various factors such as soil moisture, sunlight levels, and temperature to provide optimal instructions for plant maintenance. PlantPal works by taking readings from capacitive PCB, a photoresistor, and a thermistor. The capacitive PCB will stick into the soil of a plant that needs monitoring and will read voltage outputs from a pulse. Depending on the moisture content of the soil, the capacitance in the circuit changes which will distort the pulse. From these distortions, we can extrapolate the moisture content of the soil. Similarly, we will use readings from a photoresistor and a thermistor to read sunlight levels and temperature. Our product will record the history of these variables and present them graphically on our UI. Based on these readings, our product will provide instructions via reminders through our app for plant maintenance such as watering, draining, or moving locations to optimize healthy plant growth.</p>
+      <h4>Customer</h4>
+      <p>This product is designed for amateur hobbyists who want to get into gardening. Nowadays plants are imported from all parts of the world. Each plant thrives in different conditions and as a novice gardener, it is difficult to determine the optimate conditions for each plant to prevent them from dying. Our product acts as a trainer by providing reminders, tips, and instructions for plant maintenance for beautiful, healthy plants.</p>
+      <h4>Key Benefits</h4>
+      <p>A key benefit of our product is active monitoring. Because our product is constantly reading plant growth variables we're able to provide optimal instruction for plant maintenance resulting in a healthier plant. </p>
+
+    </div>
+
+    <div class='separator' id='tm'>Team Members</div>
+
+    <table class='margin-top-xl'>
+      <thead>
+        <tr>
+          <th class='small'> Name </th>
+          <th class='large'> Email </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> Adin Ackerman </td>
+          <td> aiackerman@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Michael Brown </td>
+          <td> m9brown@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Kelvin Duong </td>
+          <td> k6duong@ucsd.edu </td>
+        </tr>
+        <tr>
+          <td> Jerome Lam </td>
+          <td> j2lam@ucsd.edu </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class='separator'>Project Updates</div>
+    <div class='update'>
+      <h3>Week 2</h3>
+      <h4>Product Proposal</h4>
+      <p>We would like to introduct our product PlantPal. PlantPal is a set of devices read moisture, sunlight, and temperature data to monitor the health of your plants. The devices are all connected to a centralized database which is viewable via our phone app. The product is designed to help individuals learn or improve their plant caretaking skills.</p>
+      <h4>Early Market Research</h4>
+      <p>We presented our initial proposal to friends and family who engjoy gardening and asked wether or not they would be interested in buying a finished product. From our poll 11/12 would be interested in our product showing that it potential for our customer base. We also asked wether they saw the product as a vitamin or painkiller and the customers were fairly split with 58.3% claiming the product was vitamin while the other 41.7 claiming the product to be a pain killer. </p>
+      <h4>Plans</h4>
+      <p>We are at the start of the development process so there isn't much to update regarding the project. We created a github project board for project management and set goals for our project including getting the bluetooth on our MCU to work so we can connect it our phones. </p>
+    </div>
+
+    <div class='update' id='up'>
+      <h3>Week 3</h3>
+      <h4>Bluetooth</h4>
+      <p>This week were were able to successfully connect the ESP32 board to bluetooth and communicate with our phones. We created a simple test to turn on an LED. We successfully paired the board to the phone's bluetooth and were able to toggle the LED light remotely.</p>
+      <h4>Plans</h4>
+      <p>Our plan for the next week is to work on the PCB for our product. The goal is to build a capacitive circuit that will stick into the soil and read voltage values. Depending on the soil's moisture content the capacitance of the circuit will change which should affect the voltage readings. Based on this well will determine the soil's moisture content.
+      <p>
+    </div>
+    <div class='upcoming'>
+      <p>Come back next week for more updates</p>
+    </div>
+    <div class='separator'>
+      Survey
+    </div>
+    <section class='responsive_grid'>
+
+      <div class='field'>
+        <label> Enter your first name: &nbsp;</label>
+        <input type='text' name='name' value='' class='margin-top-lg'>
+      </div>
+    </section>
+
+    <section class='responsive_grid'>
+      <div class="field">
+        <label> Do you like this page? </label>
+        <label class="margin-top-lg control control--checkbox">Yes
+          <input type="checkbox" checked="checked" />
+          <div class="control__indicator"></div>
+        </label>
+        <label class="control control--checkbox">No
+          <input type="checkbox" />
+          <div class="control__indicator"></div>
+        </label>
+      </div>
+
+      <div class="field">
+        <label> Are you having a good day? </label>
+        <label class="margin-top-lg control control--radio">Yes
+          <input type="radio" name="radio" checked="checked" />
+          <div class="control__indicator"></div>
+        </label>
+        <label class="control control--radio">No
+          <input type="radio" name="radio" />
+          <div class="control__indicator"></div>
+        </label>
+      </div>
+    </section>
+
+    </form>
+
+  </section>
+</body>
+
+</html>
