@@ -17,16 +17,16 @@
 <body>
 
   <div class='hero'>
-    <h1> PlantPal </h1>
+    <h1 id = 'top'> PlantPal </h1>
     <p> Landing page for my ECE 140B project </p>
   </div>
 
   <section class='padding-responsive'>
     <div class="flex-container">
-      <div><a href="#kvp">Key Value Proposition</a>.</div>
-      <div><a href="#pp">Product Page</a>.</div>
-      <div><a href="#tm">Team Members</a>.</div>
-      <div><a href="#up">Updates</a>.</div>
+      <div><a href="#kvp">Key Value Proposition</a></div>
+      <div><a href="#pp">Product Page</a></div>
+      <div><a href="#tm">Team Members</a></div>
+      <div><a href="#up">Updates</a></div>
     </div>
     <div class='separator' id='kvp'>Key Value Proposition</div>
     <div class='update'>
@@ -84,7 +84,7 @@
       <p>We are at the start of the development process so there isn't much to update regarding the project. We created a github project board for project management and set goals for our project including getting the bluetooth on our MCU to work so we can connect it our phones. </p>
     </div>
 
-    <div class='update' id='up'>
+    <div class='update'>
       <h3>Week 3</h3>
       <h4>Bluetooth</h4>
       <p>This week were were able to successfully connect the ESP32 board to bluetooth and communicate with our phones. We created a simple test to turn on an LED. We successfully paired the board to the phone's bluetooth and were able to toggle the LED light remotely.</p>
@@ -92,9 +92,18 @@
       <p>Our plan for the next week is to work on the PCB for our product. The goal is to build a capacitive circuit that will stick into the soil and read voltage values. Depending on the soil's moisture content the capacitance of the circuit will change which should affect the voltage readings. Based on this well will determine the soil's moisture content.
       <p>
     </div>
+    
+     <div class='cur-update'id='up'>
+      <h3>Week 4</h3>
+      <h4>Electronics</h4>
+      <p>This week we made progress towards our battery charging circuit and the PCV. Initially we were set on using a solar pannel so that we would not have to recharge the battery for the device. We decided that for the interest of time we would just use a coin cell battery to power the device for this class and possibly implement a solar panel in future updates. We started making progress towards the PCB and the capacitive circuit to measure soil moisture</p>
+      <h4>Plans</h4>
+      <p>Our plan for the next week is to finish designing the PCB so we can place an order for it to be manufactured. After the PCB arrives we'll assemble our product's circuit board. We also have plans to work on the software for the app that interfaces with the devices to collect data.
+    </div>
     <div class='upcoming'>
       <p>Come back next week for more updates</p>
     </div>
+    <a href="#top">Back To The Top</a>
     <div class='separator'>
       Survey
     </div>

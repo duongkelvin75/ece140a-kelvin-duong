@@ -65,8 +65,8 @@ h2 {
 }
 h3 {
   font-size: calc(1rem + 2.1vw);
-  color: var(--dark-color);
-  text-transform: uppercase;
+  color: var(--light-color);
+/*   text-transform: uppercase; */
 }
 h4 {
   font-size: calc(1rem + 1.5vw);
@@ -86,6 +86,17 @@ p {
   margin: var(--margin-lg) auto;
   border: 1px solid var(--dark-color);
   border-radius: var(--border-radius);
+}
+.cur-update {
+  padding: var(--padding-lg) var(--padding-xl);
+  margin: var(--margin-lg) auto;
+  border: 1px solid var(--dark-color);
+  border-radius: var(--border-radius);
+}
+.cur-update > h3{
+  font-size: calc(1rem + 2.1vw);
+  color: var(--dark-color);
+  text-transform: uppercase;
 }
 .upcoming {
   padding: var(--padding-lg);
@@ -115,12 +126,22 @@ a {
   color: var(--accent-color);
   text-decoration: none;
 }
-/* h2, h3, h4, h5, h6, .card {
-  padding: var(--padding-lg);
-  margin: var(--margin-med) auto;
-  background: var(--light-color);
-  width: 100%;
-} */
+.flex-container > div:hover {
+  background-color: var(--dark-color);
+}
+//Mobile first! Default to a single column.
+section.grid{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:1.5rem;
+}
+//Switch to a 2-column grid when the screen is large enough.
+@media all and (min-width: 1024px){
+  section.grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 table {
   table-layout: fixed;
   border-collapse: collapse;
