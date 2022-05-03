@@ -74,6 +74,7 @@ h4 {
 }
 h5 {
   font-size: calc(1rem + 1vw);
+  color: var(--dark-color-alt);
 }
 h6 {
   font-size: calc(1rem + 0.5vw);
@@ -140,6 +141,10 @@ section.grid{
   section.grid{
     grid-template-columns: 1fr 1fr;
   }
+}
+img{
+  width: 25%;
+  height:auto;
 }
 
 table {
